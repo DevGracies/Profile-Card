@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            font-family: 'Poppins', sans-serif;
+        }
+        .profile-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            padding: 30px;
+            max-width: 380px;
+            width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+        .profile-card:hover {
+            transform: scale(1.05);
+        }
+        .profile-picture {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #764ba2;
+            margin-bottom: 15px;
+        }
+        .profile-card h2 {
+            margin: 10px 0;
+            color: #333;
+            font-size: 22px;
+        }
+        .profile-card p {
+            color: #555;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+        .social-links a {
+            margin: 10px;
+            color: #0073b1;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease-in-out;
+        }
+        .social-links a:hover {
+            color: #005582;
+        }
+        .email {
+            background: #764ba2;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <img src="bg.jpg" alt="Profile Picture" class="profile-picture" data-testid="profilePicture">
+        <h2 data-testid="fullName">Grace Adegunle</h2>
+        <p data-testid="jobTitle"><strong>Software Developer</strong></p>
+        <p data-testid="shortBio">Passionate full-stack developer specializing in MERN stack and React Native, dedicated to building impactful solutions.</p>
+        <p data-testid="currentLocation">📍 Nigeria</p>
+        <p class="email" data-testid="emailAddress">graceadegunle16@example.com</p>
+        <div class="social-links" data-testid="socialLinks">
+            <a href="www.linkedin.com/in/graceadegunle" target="_blank">LinkedIn</a>
+            <a href="https://github.com/DevGracies" target="_blank">GitHub</a>
+        </div>
+        <p data-testid="currentTimeUTC" id="utcTime"></p>
+    </div>
+
+    <script>
+        function updateTime() {
+            const utcTimeElement = document.getElementById('utcTime');
+            const now = new Date();
+            utcTimeElement.textContent = `🕒 ${now.toUTCString()}`;
+        }
+        updateTime();
+    </script>
+</body>
+</html>
