@@ -61,7 +61,10 @@
             border-radius: 20px;
             display: inline-block;
             margin-top: 10px;
+            cursor: pointer;
+            border: none;
         }
+        
     </style>
 </head>
 <body>
@@ -71,9 +74,11 @@
         <p data-testid="jobTitle"><strong>Software Developer</strong></p>
         <p data-testid="shortBio">Passionate full-stack developer specializing in MERN stack and React Native, dedicated to building impactful solutions.</p>
         <p data-testid="currentLocation">📍 Nigeria</p>
-        <p class="email" data-testid="emailAddress">graceadegunle16@gmail.com</p>
+        <a href="mailto:graceadegunle16@gmail.com" target="_blank" rel="noopener noreferrer">
+            <button class="email" data-testid="graceadegunle16@gmail.com">graceadegunle16@gmail.com</button>
+        </a>
         <div class="social-links" data-testid="socialLinks">
-            <a href="www.linkedin.com/in/graceadegunle" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/graceadegunle/" target="_blank">LinkedIn</a>
             <a href="https://github.com/DevGracies" target="_blank">GitHub</a>
         </div>
         <p data-testid="currentTimeUTC" id="utcTime"></p>
